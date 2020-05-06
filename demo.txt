@@ -1,0 +1,209 @@
+dbsrv1:~/csc343db$ psql csc343h-chenpan
+psql (10.10 (Ubuntu 10.10-0ubuntu0.18.04.1))
+Type "help" for help.
+
+csc343h-chenpan=> \i runner.txt
+-------------------- Loading schema and data: --------------------
+
+psql:schema.ddl:25: NOTICE:  drop cascades to 35 other objects
+DETAIL:  drop cascades to table vacationschema.guest
+drop cascades to table vacationschema.creditcard
+drop cascades to table vacationschema.host
+drop cascades to table vacationschema.property
+drop cascades to table vacationschema.cityproperty
+drop cascades to table vacationschema.waterproperty
+drop cascades to table vacationschema.rental
+drop cascades to table vacationschema.stay
+drop cascades to table vacationschema.week
+drop cascades to table vacationschema.hostrating
+drop cascades to table vacationschema.propertyrating
+drop cascades to table vacationschema.comment
+drop cascades to table vacationschema.q1
+drop cascades to table vacationschema.q2
+drop cascades to view vacationschema.atcapacity
+drop cascades to view vacationschema.belowcapacity
+drop cascades to view vacationschema.atcapacityavgrating
+drop cascades to view vacationschema.belowcapacityavgrating
+drop cascades to table vacationschema.q3
+drop cascades to view vacationschema.hostandrating
+drop cascades to view vacationschema.hostaveragerating
+drop cascades to view vacationschema.hostsnotwithhighestrating
+drop cascades to view vacationschema.hostswithhighestrating
+drop cascades to view vacationschema.ahostandrental
+drop cascades to view vacationschema.ahostweekprice
+drop cascades to view vacationschema.ahostwithhighestprice
+drop cascades to view vacationschema.ans
+drop cascades to table vacationschema.q4
+drop cascades to view vacationschema.city
+drop cascades to view vacationschema.water
+drop cascades to view vacationschema.other
+drop cascades to table vacationschema.q5
+drop cascades to view vacationschema.propertyeveryprice
+drop cascades to view vacationschema.propertyextremeprice
+drop cascades to view vacationschema.highestrange
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 6
+INSERT 0 5
+INSERT 0 3
+INSERT 0 6
+INSERT 0 1
+INSERT 0 1
+INSERT 0 5
+INSERT 0 12
+INSERT 0 6
+INSERT 0 5
+INSERT 0 9
+INSERT 0 3
+
+-------------------- Query 1: -----------------------------------
+
+SET
+psql:q1.sql:4: NOTICE:  table "q1" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q1.sql:18: NOTICE:  view "intermediate_step" does not exist, skipping
+DROP VIEW
+psql:q1.sql:46: NOTICE:  view "ans" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+INSERT 0 1
+
+-------------------- Query 2: -----------------------------------
+
+SET
+psql:q2.sql:4: NOTICE:  table "q2" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q2.sql:16: NOTICE:  view "intermediate_step" does not exist, skipping
+DROP VIEW
+psql:q2.sql:22: NOTICE:  view "atcapacity" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q2.sql:31: NOTICE:  view "belowcapacity" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q2.sql:40: NOTICE:  view "atcapacityavgrating" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q2.sql:48: NOTICE:  view "belowcapacityavgrating" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+INSERT 0 1
+
+-------------------- Query 3: -----------------------------------
+
+SET
+psql:q3.sql:4: NOTICE:  table "q3" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q3.sql:15: NOTICE:  view "intermediate_step" does not exist, skipping
+DROP VIEW
+psql:q3.sql:24: NOTICE:  view "hostandrating" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q3.sql:35: NOTICE:  view "hostaveragerating" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q3.sql:46: NOTICE:  view "hostsnotwithhighestrating" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q3.sql:58: NOTICE:  view "hostswithhighestrating" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q3.sql:72: NOTICE:  view "ahostandrental" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q3.sql:84: NOTICE:  view "ahostweekprice" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q3.sql:96: NOTICE:  view "ahostwithhighestprice" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+DROP VIEW
+CREATE VIEW
+INSERT 0 1
+
+-------------------- Query 4: -----------------------------------
+
+SET
+psql:q4.sql:4: NOTICE:  table "q4" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q4.sql:15: NOTICE:  view "intermediate_step" does not exist, skipping
+DROP VIEW
+psql:q4.sql:21: NOTICE:  view "city" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q4.sql:31: NOTICE:  view "water" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q4.sql:42: NOTICE:  view "other" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+INSERT 0 1
+
+-------------------- Query 5: -----------------------------------
+
+SET
+psql:q5.sql:4: NOTICE:  table "q5" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q5.sql:17: NOTICE:  view "intermediate_step" does not exist, skipping
+DROP VIEW
+psql:q5.sql:24: NOTICE:  view "propertyeveryprice" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q5.sql:36: NOTICE:  view "propertyextremeprice" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q5.sql:47: NOTICE:  view "highestrange" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+INSERT 0 3
+csc343h-chenpan=> select * from q1;
+ hot_tub | sauna | laundry_service | daily_cleaning | daily_breakfast_delivery | concierge_service 
+---------+-------+-----------------+----------------+--------------------------+-------------------
+       4 |     2 |               2 |              3 |                        1 |                 2
+(1 row)
+
+csc343h-chenpan=> select * from q2;
+ num_at_capacity | avg_at_capacity  | num_below_capacity | avg_below_capacity 
+-----------------+------------------+--------------------+--------------------
+               3 | 3.83333333333333 |                  2 |   1.66666666666667
+(1 row)
+
+csc343h-chenpan=> select * from q3;
+ email_address | average_host_rating | most_expensive_price 
+---------------+---------------------+----------------------
+ han@gmail.com |    4.33333333333333 |                 1220
+(1 row)
+
+csc343h-chenpan=> select * from q4;
+ city_property | water_property | other 
+---------------+----------------+-------
+             2 |              1 |   1.5
+(1 row)
+
+csc343h-chenpan=> select * from q5;
+ property_id | highest | lowest | range | star 
+-------------+---------+--------+-------+------
+           5 |    1220 |   1000 |   220 | *
+           2 |     600 |    580 |    20 | 
+           3 |     750 |    750 |     0 | 
+(3 rows)
+
+csc343h-chenpan=> 
